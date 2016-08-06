@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProjectTwo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+              <ul>
+               <li><%= link_to "Home", root_path %></li>
+               <li><%= link_to "About", about_path %></li>
+               <% if current_user %>
+                 <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                 <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+               <% else %>
+                 <li><%= link_to "Sign In", new_user_session_path %></li>
+                 <li><%= link_to "Register", new_user_registration_path %></li>
+               <% end %>
+              </ul>
+          </div>    
+        </div>  
+      </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <main>
+      <%= yield %>
+    </main>  
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
