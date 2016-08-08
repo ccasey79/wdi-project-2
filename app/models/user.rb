@@ -5,5 +5,15 @@ class User < ApplicationRecord
          :rememberable, :trackable, :validatable
   
   mount_uploader :profile_picture, ProfilePictureUploader
-
+ 
+  has_many :recipes
+  has_many :comments
+  
 end
+
+
+
+
+
+
+
