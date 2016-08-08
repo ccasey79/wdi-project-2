@@ -8,6 +8,14 @@ class User < ApplicationRecord
  
   has_many :recipes
   has_many :comments
+
+  def full_name
+    "#{self.first_name} #{self.last_name}"
+  end
+
+  def profile_image
+    self.profile_picture.nil? ? "http://fillmurray.com/200/300" : self.profile_picture.url
+  end
   
 end
 
