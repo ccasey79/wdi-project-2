@@ -38050,3 +38050,43 @@ Processing by RecipesController#show as HTML
 Completed 200 OK in 202ms (Views: 123.0ms | ActiveRecord: 18.9ms)
 
 
+Started GET "/recipes/2" for ::1 at 2016-08-10 16:22:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (196.9ms)
+  Rendered application/_header.html.erb (2.8ms)
+  Rendered application/_notices.html.erb (0.9ms)
+Completed 200 OK in 2300ms (Views: 2087.7ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/recipes/2" for ::1 at 2016-08-10 16:24:40 +0100
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (15.0ms)
+  Rendered application/_header.html.erb (15.5ms)
+  Rendered application/_notices.html.erb (1.1ms)
+Completed 200 OK in 5099ms (Views: 5081.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/recipes/2" for ::1 at 2016-08-10 16:26:29 +0100
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (2.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (10.5ms)
+  Rendered application/_header.html.erb (15.4ms)
+  Rendered application/_notices.html.erb (0.8ms)
+Completed 200 OK in 3843ms (Views: 3824.6ms | ActiveRecord: 4.9ms)
+
+
