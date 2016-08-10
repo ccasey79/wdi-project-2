@@ -16,7 +16,7 @@
           </li>
         <% else %>
           <li class="nav-item nav-link">
-            <%= current_user.username %>    
+            <%= link_to current_user.username, current_user %>    
           </li>
           <li class="nav-item nav-link">
             <%= link_to "Edit Profile", edit_user_registration_path %>
