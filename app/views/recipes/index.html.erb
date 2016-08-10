@@ -1,18 +1,21 @@
-<h1>Recipes</h1>
+<h1 class="recipehead">Recipes</h1>
 
-<%= link_to 'New Recipe', new_recipe_path, class: "btn btn-primary" %>
+<br />
+ 
+  <%= link_to 'New Recipe', new_recipe_path, class: "btn btn-primary primary"  %>
 
-<ul class="list-group">
-  <% @recipes.each do |recipe| %>
-    <%= link_to recipe, class: 'list-group-item' do %>
-      <div class="row">
-        <div class="col-md-3">
-          <%= recipe.name %>
+  <ul class="list-group">
+    <% @recipes.each do |recipe| %>
+      <%= link_to recipe, class: 'list-group-item list-group-item-action list-group-item-warning' do %>
+        <div class="row">
+          <div class="col-md-3">
+            <%= recipe.name %>
+          </div>
+          <div class="col-md-9">
+            <%= image_tag recipe.image, height: 100 %>
+          </div>
         </div>
-        <div class="col-md-9">
-          <%= image_tag recipe.image, height: 100 %>
-        </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+ 

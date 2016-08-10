@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'carrierwave', '0.10.0'
+gem 'fog', require: 'fog/aws'
 
 gem 'devise'
 

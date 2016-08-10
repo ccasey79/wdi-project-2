@@ -3,22 +3,23 @@
   <head>
     <title>ProjectTwo</title>
     <%= csrf_meta_tags %>
-
+     
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" type="text/css" href="application.scss">
+    
   </head>
 
   <body>        
      
+
     <%= render "header" %>
+      <div class="shader"></div>
+      <main class="container main-content">
+       
+          <%= render "notices" %>
 
-    <main class="container">
-      <%= render "notices" %>
-
-      <%= yield %>
-    </main>
-
+          <%= yield %>  
+      </main>   
   </body>
 </html>
 
