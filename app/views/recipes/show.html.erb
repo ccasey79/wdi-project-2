@@ -1,31 +1,33 @@
 <h1><%= @recipe.name %></h1>
 
 <div class="row">
-  <div class="col-md-6">
-    <%= image_tag @recipe.image, class: 'img-fluid' %>
-  </div>
-  <div class="col-md-6">
-    <h4>Ingredients</h4>
-    <ul class="list-group">
-      <% @recipe.ingredient_list.each do |ingredient| %>
-        <li class="list-group-item list-group-item-action list-group-item-warning"><%= ingredient %></li>
-      <% end %>
-    </ul>
-  </div>
+  <div class="img-thumbnail-top">
+    <div class="col-md-6">
+      <%= image_tag @recipe.image, class: 'img-fluid' %>
+    </div>
+    <h4 class="ingredients">Ingredients</h4>
+       <input id="expander" type="checkbox" />
+       <ul id="expand">
+       <% @recipe.ingredient_list.each do |ingredient| %>
+         <li><%= ingredient %></li>
+       <% end %>
+       </ul>
+       <label class="dropdown" for="expander"></label>
 </div>
 
-<h4>Method</h4>
-<ul class="list-group">
-  <% @recipe.steps.each do |step| %>
-    <li class="list-group-item list-group-item-action list-group-item-warning">
-      <%= step %>
-    </li>
-  <% end %>
-</ul>
+<h4 class="method">Method</h4>
+  <ul class="list-grouplow">
+    <% @recipe.steps.each do |step| %>
+      <li class="list-group-item list-group-item-action list-group-item-warning">
+        <%= step %>
+      </li>
+    <% end %>
+  </ul>
 
 <% if user_signed_in? %>
   <%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-primary edit' %>
   <%= link_to "Delete", recipe_path(@recipe), method: :destroy, class: 'btn btn-danger delete' %>
+
 <% end %>
 
 <h4 class="comment">Comments</h4>
@@ -38,27 +40,30 @@
   <% end %>
 </ul>
 
-<%= form_for(@comment) do |f| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+<% if user_signed_in? %>
+  <%= form_for(@comment) do |f| %>
+    <% if @comment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
-      <ul>
-      <% comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.hidden_field :recipe_id, value: @recipe.id %>
+    
+    <div class="form-group">
+      <%= f.text_area :content, placeholder: "Join the discussion...", class: "form-control" %>
     </div>
+    
+    <%= f.submit class: "btn btn-primary belowbutton" %>
   <% end %>
-
-  <%= f.hidden_field :recipe_id, value: @recipe.id %>
-  
-  <div class="form-group">
-    <%= f.text_area :content, placeholder: "Join the discussion...", class: "form-control" %>
-  </div>
-  
-  <%= f.submit class: "btn btn-primary" %>
 <% end %></br />
+  <%= link_to 'Back', recipes_path, class: "backbutton" %>
 <br />
 <br />
 
