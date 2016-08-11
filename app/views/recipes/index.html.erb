@@ -8,14 +8,23 @@
     <% @recipes.each do |recipe| %>
       <%= link_to recipe, class: 'list-group-item list-group-item-action list-group-item-warning' do %>
         <div class="row">
-          <div class="col-md-3">
-            <%= recipe.name %>
+          <div class="recipe-name">
+            <div class="col-md-6">
+              <%= recipe.name %>
+            </div>
           </div>
-          <div class="col-md-9">
-            <%= image_tag recipe.image, height: 100 %>
-          </div>
+          <div class="thumbnail"  
+            <div class="col-md-6">
+              <%= image_tag recipe.image, height: 100 %>
+            </div>
+          </div>  
         </div>
       <% end %>
     <% end %>
   </ul>
+ 
+
+
+
+
  
