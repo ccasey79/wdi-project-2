@@ -1,20 +1,23 @@
 
 <div class="row">  
   <div class="col-md-6">
-      <h2 class="profile">Profile Page</h2>
+      <h2 class="profile">Profile Page</h2><br />
 
-     
-      <h4 class="card-title"><%= @user.username %></h4>
       <%= image_tag @user.profile_image, class: 'card-img-top' %> 
+
+      <h3 class="card-title">Username: <%= @user.username %></h3>
+      <h4>First Name: <%= @user.first_name %></h4>
+      <h4>Last Name: <%= @user.last_name %></h4>
+      <h4>Email: <%= @user.email %></h4>
   </div>  
   <div class="col-md-6">
-    <h3>Very Own Recipes</h3>
+    <h3 class="recipetitle">Very Own Recipes</h3>
 
     <ul class="list-group">  
       <% @user.recipes.each do |recipe| %>
         <li class="list-group-item">
           <%= link_to recipe.name, recipe, class: 'recipes-link' %>
-          <%= image_tag recipe.image, class: 'img-fluid' %>
+          <%= image_tag recipe.image, class: 'users-recipe-img' %>
         </li>
       <% end %>
     </ul>  
