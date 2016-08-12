@@ -6,19 +6,19 @@
       <%= image_tag @user.profile_image, class: 'card-img-top' %> 
 
       <h3 class="card-title">Username: <%= @user.username %></h3>
-      <h4>First Name: <%= @user.first_name %></h4>
-      <h4>Last Name: <%= @user.last_name %></h4>
-      <h4>Email: <%= @user.email %></h4>
+      <h4 class="First">First Name: <%= @user.first_name %></h4>
+      <h4 class="Last">Last Name: <%= @user.last_name %></h4>
+      <h4 class="email">Email: <%= @user.email %></h4>
   </div>  
   <div class="col-md-6">
     <h3 class="recipetitle">Very Own Recipes</h3>
 
     <ul class="list-group">  
       <% @user.recipes.each do |recipe| %>
-        <li class="list-group-item">
+        <!-- <li class="list-group-item" class="test"> -->
           <%= link_to recipe.name, recipe, class: 'recipes-link' %>
           <%= image_tag recipe.image, class: 'users-recipe-img' %>
-        </li>
+        <!-- </li> -->
       <% end %>
     </ul>  
   </div>
