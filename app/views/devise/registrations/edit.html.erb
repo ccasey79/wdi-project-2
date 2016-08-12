@@ -24,7 +24,7 @@
 
       <div class="form_group">
         <%= f.label :profile_picture %><br />
-        <%= f.file_field :profile_picture %>
+        <%= f.file_field :profile_picture, class: "profile-tab" %>
       </div><br />
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -35,7 +35,7 @@
         <%= f.label :password %><br />
         <%= f.password_field :password, placeholder: "Password", class: "form-control", autocomplete: "off" %>
         <% if @minimum_password_length %>
-          <em><%= @minimum_password_length %> characters minimum</em>
+          <em id="characters"><%= @minimum_password_length %> characters minimum</em>
         <% end %>
       </div></br />
 
