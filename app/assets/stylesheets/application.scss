@@ -194,7 +194,6 @@ ul.navbar-nav a:hover {
 a {
   color: #804615;
   padding: 5px;
-  // margin-left: 70px;
 }
 
 .recipes-link {
@@ -202,6 +201,10 @@ a {
   padding: 5px;
   font-size: 32px;
   margin-left: 140px;
+}
+
+.recipes-link:hover {
+  color: #804615;
 }
 
 .card-img-top {
@@ -323,19 +326,14 @@ a {
   color: #804615;
   padding: 5px;
   margin-left: 15px;
-}
-
-.btn btn-primary belowbutton {
-    color: #fff;
-    background-color: #0275d8;
-    border-color: #0275d8;
-    margin-left: 18px;
+  font-size: 20px;
 }
 
 label {
     display: inline-block;
     margin-bottom: .5rem;
     margin-left: 15px;
+    font-size: 20px;
 }    
 
 .edithead {
@@ -348,6 +346,7 @@ label {
   margin-top: 30px;
   margin-bottom: 35px;
   margin-left: 140px;
+  text-decoration: underline;
 }
 
 .users-recipe-img {
@@ -387,16 +386,19 @@ label {
   margin-left: 20px;
   font-size: 1.2rem;
   margin-top: 40px;
+  color: #804615; 
 }
 
 .Last {
   margin-left: 20px;
   font-size: 1.2rem;
+  color: #804615;
 }
 
 .email {
   margin-left: 20px;
   font-size: 1.2rem;
+  color: #804615;
 }
 
 .profile-tab {
@@ -410,8 +412,138 @@ label {
   margin-left: 17px;
 }
 
+.new-recipe {
+  font-size: 20px;
+  background-color: #804615;
+  border-radius: 5px;
+  border-color: #804615;
+}
 
+.new-recipe:hover {
+  background-color: #804615;
+  margin-left: 2px;
+}
 
+.edit-button {
+  font-size: 20px;
+  background-color: #804615;
+  border-color: #804615; 
+}
+
+.delete-button {
+  font-size: 20px;
+  background-color: #b30000;
+  border-color: #b30000; 
+}
+
+.edit-button:hover {
+  background-color: #804615;
+}
+
+.delete-button:hover {
+  background-color: #b30000;
+}
+
+.belowbutton {
+  color: #fff;
+  background-color: #804615;
+  border-color: #804615;
+  margin-left: 18px;
+  font-size: 20px;
+}
+
+.belowbutton:hover {
+  background-color: #804615;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  margin-left: 17px;
+  margin-right: 19px;
+}
+
+.method-list:last-child {
+  // background-color: #804615;
+  margin-left: 0px;
+}
+
+.recipe-list:last-child {
+  margin-left: 0px;
+}
+
+.update-button {
+  font-size: 20px;
+  margin-left: 17px;
+  background-color: #804615;
+  border-color: #804615;
+  margin-bottom: 8px;
+}
+
+.update-button:hover {
+  background-color: #804615;
+}
+
+.showbutton {
+  font-size: 20px;
+  margin-left: 17px;
+}
+
+.showbutton:hover {
+  color: #804615;
+}
+
+.backbutton {
+  font-size: 20px;
+}
+
+.backbutton:hover {
+  color: #804615;
+}
+
+.sign-up {
+  font-size: 25px;
+  margin-left: 17px;
+  margin-top: 3px;
+  background-color: #804615;
+  border-color: #804615;
+}
+
+.sign-up:hover {
+  background-color: #804615;
+}
+
+.login-button {
+  font-size: 20px;
+  background-color: #804615;
+  border-color: #804615;
+}
+
+.login-button:hover {
+   background-color: #804615;
+}
+
+.update-editbutton {
+  font-size: 20px;
+  background-color: #804615;
+  border-color: #804615;
+  margin-left: 16px;
+}
+
+.update-editbutton:hover {
+  background-color: #804615;
+}
+
+.account {
+  font-size: 20px; 
+  margin-left: 14px;
+}
+
+#nothappy {
+  font-size: 25px;
+  margin-left: 17px;
+}
 
 
 
