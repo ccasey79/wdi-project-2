@@ -73,6 +73,7 @@ Screenshot of landing page:
 ![ruby1](https://cloud.githubusercontent.com/assets/17442168/19132319/d431c30a-8b4a-11e6-905d-17a867102650.png)
 
 Screenshots of recipe pages:
+-----------------------------
 
 ![ruby2](https://cloud.githubusercontent.com/assets/17442168/19132327/e18b08d6-8b4a-11e6-8006-da7a0c98851c.png)
 
